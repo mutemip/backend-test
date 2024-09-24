@@ -16,8 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+from authentication.views import google_login, UserProfileAPIView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('customerOrder.api.urls')),
+    path('api/user/profile/', UserProfileAPIView.as_view(), name='user-profile'),
+    path('google-login/', google_login, name='google-login'),
+    path('auth/', include('rest_framework.urls')),  # DRF auth
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('oauth/', include('social_django.urls', namespace='social')),
 ]
