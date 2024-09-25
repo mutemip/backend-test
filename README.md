@@ -54,7 +54,7 @@
  - To create customer use: <http://localhost:8000/api/customer/> Endpoint
  - To make an order user: <http://localhost:8000/api/order/> Endpoint
 
- ** Check this Scribe walkthrough of the API: ** <https://scribehow.com/shared/Complete_Backend_test_overview__cphgVdKpReeqjwThRt3ctA>
+ **Check this Scribe walkthrough of the API:** <https://scribehow.com/shared/Complete_Backend_test_overview__cphgVdKpReeqjwThRt3ctA>
 
  ## Hosted the API on pythonanywhere PAAS platform
   - Live link: https://mutemi.pythonanywhere.com/api
